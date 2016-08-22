@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Peak SDK Demo</string>
+    <string name="error_native_ad_not_provided">Native ad not provided</string>
+    <string name="error_banner_ad_not_provided">Banner ad not provided</string>
+
+    <string-array name="ad_types">
+        <item>Banner</item>
+        <item>Static Interstitial</item>
+        <item>Video Interstitial</item>
+        <item>Rewarded Video</item>
+        <item>Native Ad</item>
+    </string-array>
+</resources>
