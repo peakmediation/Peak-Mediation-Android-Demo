@@ -40,6 +40,7 @@ public class NativeAdActivity extends AppCompatActivity {
     private ImageView logoImageView;
     private ImageView privacyIconImageView;
     private TextView titleTextView;
+    private TextView sponsoredTextView;
     private TextView descriptionTextView;
     private Button adActionButton;
     private ProgressBar progressBar;
@@ -117,6 +118,7 @@ public class NativeAdActivity extends AppCompatActivity {
         logoImageView = (ImageView) findViewById(R.id.logoImageView);
         privacyIconImageView = (ImageView) findViewById(R.id.privacyInformationIconImageView);
         titleTextView = (TextView) findViewById(R.id.titleTextView);
+        sponsoredTextView = (TextView) findViewById(R.id.sponsoredTextView);
         descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
         adActionButton = (Button) findViewById(R.id.interactWithAdButton);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -140,6 +142,7 @@ public class NativeAdActivity extends AppCompatActivity {
         fillPrivacyInformationIcon(nativeAd, imageLoader);
         titleTextView.setText(nativeAd.getTitle());
         descriptionTextView.setText(nativeAd.getText());
+        sponsoredTextView.setText(R.string.sponsored);
         adActionButton.setVisibility(View.VISIBLE);
         adActionButton.setText(nativeAd.getActionText());
         adActionButton.setOnClickListener(new View.OnClickListener() {
