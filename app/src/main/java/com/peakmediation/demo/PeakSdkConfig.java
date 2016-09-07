@@ -12,5 +12,4 @@ public final class PeakSdkConfig {
     public static final String REWARDED_VIDEO_INTERSTITIAL_ID = "69517";
     public static final String NATIVE_AD_ID = "69501";
 
-
 }

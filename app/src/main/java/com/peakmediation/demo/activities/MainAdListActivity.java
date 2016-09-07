@@ -84,6 +84,11 @@ public class MainAdListActivity extends AppCompatActivity {
         ActivityCompat.startActivity(this, nativeAdIntent, null);
     }
 
+    private void showBannerAdAsync() {
+        Intent nativeAdIntent = new Intent(this, BannerAdAsyncActivity.class);
+        ActivityCompat.startActivity(this, nativeAdIntent, null);
+    }
+
 
     private void showNativeAd() {
         Intent nativeAdIntent = new Intent(this, NativeAdActivity.class);
@@ -93,16 +98,20 @@ public class MainAdListActivity extends AppCompatActivity {
     private class OnAdTypesListClickListener implements AdapterView.OnItemClickListener {
 
         private static final int BANNER_AD_TYPE_POSITION = 0;
-        private static final int STATIC_INTERSTITIAL_AD_TYPE_POSITION = 1;
-        private static final int VIDEO_INTERSTITIAL_AD_TYPE_POSITION = 2;
-        private static final int REWARDED_VIDEO_AD_TYPE_POSITION = 3;
-        private static final int NATIVE_AD_TYPE_POSITION = 4;
+        private static final int BANNER_AD_ASYNC_TYPE_POSITION = 1;
+        private static final int STATIC_INTERSTITIAL_AD_TYPE_POSITION = 2;
+        private static final int VIDEO_INTERSTITIAL_AD_TYPE_POSITION = 3;
+        private static final int REWARDED_VIDEO_AD_TYPE_POSITION = 4;
+        private static final int NATIVE_AD_TYPE_POSITION = 5;
 
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
             switch (position) {
                 case BANNER_AD_TYPE_POSITION:
                     showBannerAd();
+                    break;
+                case BANNER_AD_ASYNC_TYPE_POSITION:
+                    showBannerAdAsync();
                     break;
                 case STATIC_INTERSTITIAL_AD_TYPE_POSITION:
                     showStaticInterstitialAd();
