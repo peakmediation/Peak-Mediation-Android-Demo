@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.peak.PeakSdk;
 import com.peak.PeakSdkUiHelper;
-import com.peak.nativeads.PeakNativeAd;
+import com.peak.nativeads.model.PeakNativeAdModel;
 import com.peakmediation.demo.PeakSdkConfig;
 import com.peakmediation.demo.R;
 import com.squareup.picasso.Picasso;
@@ -45,7 +45,7 @@ public class NativeAdActivity extends AppCompatActivity {
     private Button adActionButton;
     private ProgressBar progressBar;
 
-    private PeakNativeAd nativeAd;
+    private PeakNativeAdModel nativeAd;
 
     private final Runnable finishActivityRunnable = new Runnable() {
         @Override
@@ -135,7 +135,7 @@ public class NativeAdActivity extends AppCompatActivity {
         }
     }
 
-    private void bindNativeAdToViews(PeakNativeAd nativeAd) {
+    private void bindNativeAdToViews(PeakNativeAdModel nativeAd) {
         Picasso imageLoader = Picasso.with(this);
         fillMainImage(nativeAd, imageLoader);
         fillIcon(nativeAd, imageLoader);
@@ -153,21 +153,21 @@ public class NativeAdActivity extends AppCompatActivity {
         });
     }
 
-    private void fillMainImage(PeakNativeAd nativeAd, Picasso imageLoader) {
+    private void fillMainImage(PeakNativeAdModel nativeAd, Picasso imageLoader) {
         String mainImage = nativeAd.getMainImage();
         if (!TextUtils.isEmpty(mainImage)) {
             imageLoader.load(mainImage).into(mainImageView);
         }
     }
 
-    private void fillIcon(PeakNativeAd nativeAd, Picasso imageLoader) {
+    private void fillIcon(PeakNativeAdModel nativeAd, Picasso imageLoader) {
         String icon = nativeAd.getIcon();
         if (!TextUtils.isEmpty(icon)) {
             imageLoader.load(icon).into(logoImageView);
         }
     }
 
-    private void fillPrivacyInformationIcon(PeakNativeAd nativeAd, Picasso imageLoader) {
+    private void fillPrivacyInformationIcon(PeakNativeAdModel nativeAd, Picasso imageLoader) {
         String privacyIcon = nativeAd.getPrivacyIcon();
         if (!TextUtils.isEmpty(privacyIcon)) {
             imageLoader.load(privacyIcon).into(privacyIconImageView);
