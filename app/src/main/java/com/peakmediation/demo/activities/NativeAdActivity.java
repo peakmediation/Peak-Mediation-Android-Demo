@@ -171,6 +171,12 @@ public class NativeAdActivity extends AppCompatActivity {
         String privacyIcon = nativeAd.getPrivacyIcon();
         if (!TextUtils.isEmpty(privacyIcon)) {
             imageLoader.load(privacyIcon).into(privacyIconImageView);
+            privacyIconImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    PeakSdk.handleNativeAdPrivacyIconClicked(NATIVE_AD_ID);
+                }
+            });
         }
     }
 
