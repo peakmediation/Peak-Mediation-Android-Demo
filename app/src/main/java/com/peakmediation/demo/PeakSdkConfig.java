@@ -2,9 +2,6 @@ package com.peakmediation.demo;
 
 public final class PeakSdkConfig {
 
-    private PeakSdkConfig() {
-    }
-
     public static final String APP_ID = "d43329759af95241";
     public static final String BANNER_ID = "69488";
     public static final String STATIC_INTERSTITIAL_ID = "69531";

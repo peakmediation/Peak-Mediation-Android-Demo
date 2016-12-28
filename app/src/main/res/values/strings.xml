@@ -1,16 +1,47 @@
 <resources>
     <string name="app_name">Peak SDK Demo</string>
+    <string name="show">Show</string>
     <string name="error_native_ad_not_provided">Native ad not provided</string>
     <string name="error_banner_ad_not_provided">Banner ad not provided</string>
-    <string name="sponsored">Sponsored</string>
     <string name="error_interstitial_ad_not_provided">Interstitial ad not provided</string>
+    <string name="error_static_interstitial_zone_id_not_provided">Static interstitial zone id not provided</string>
+    <string name="error_video_interstitial_zone_id_not_provided">Video interstitial zone id not provided</string>
+    <string name="error_rewarded_interstitial_zone_id_not_provided">Rewarded interstitial zone id not provided</string>
+    <string name="error_sdk_initialization_failed">Initialization failed. Try again</string>
+    <string name="error_application_id_not_valid">Application Id is not valid</string>
+    <string name="error_interstitial_zone_id_empty">Interstitial zone id cannot be empty</string>
+    <string name="error_banner_zone_id_empty">Banner zone id cannot be empty</string>
+    <string name="error_native_zone_id_empty">Native zone id cannot be empty</string>
+    <string name="ok">OK</string>
+    <string name="native_zone_id">Native Zone ID</string>
+    <string name="banner_zone_id">Banner Zone ID</string>
+    <string name="interstitial_zone_id">Interstitial Zone ID</string>
+    <string name="application_id">Application ID</string>
+    <string name="thank_you_for_watching">Thank you for watching. \n Press back to continue.
+    </string>
+    <string name="static_interstitial_zone_id">Static interstitial zone ID</string>
+    <string name="video_interstitial_zone_id">Video interstitial zone ID</string>
+    <string name="rewarded_interstitial_zone_id">Rewarded interstitial zone ID</string>
+    <string name="sponsored">Sponsored</string>
+    <string name="initialize">Initialize</string>
+    <string name="check">Check</string>
+    <string name="remove">Remove</string>
+    <string name="tab_native_tag">NATIVE</string>
+    <string name="tab_banner_tag">BANNER</string>
+    <string name="tab_main_tag">MAIN</string>
+    <string name="tab_log_tag">LOG</string>
+    <string name="event_log_header">Event logs</string>
+    <string name="callback_log_header">Callback logs</string>
+    <string name="send_events">Send events</string>
+    <string name="send_callbacks">Send callbacks</string>
+    <string name="targeting_age">Targeting Age</string>
+    <string name="targeting_gender">Targeting Gender</string>
+    <string name="targeting_age_et_hint">age</string>
 
-    <string-array name="ad_types">
-        <item>Banner</item>
-        <item>Banner Async</item>
-        <item>Static Interstitial</item>
-        <item>Video Interstitial</item>
-        <item>Rewarded Video</item>
-        <item>Native Ad</item>
+    <string-array name="genders">
+        <item>Unspecified</item>
+        <item>Male</item>
+        <item>Female</item>
     </string-array>
+
 </resources>
