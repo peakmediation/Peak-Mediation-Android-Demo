@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.peak.PeakSdk;
 import com.peakmediation.demo.PeakSdkConfig;
@@ -95,17 +96,35 @@ public class MainFragment extends Fragment {
 
         @Override
         public void onClick(View view) {
+            boolean isAvailable = false;
+            String zoneId;
             switch (view.getId()) {
                 case R.id.check_video_btn:
-                    PeakSdk.checkAdAvailable(videoInterstitialZoneEt.getText().toString());
+                    zoneId = videoInterstitialZoneEt.getText().toString();
+                    isAvailable = PeakSdk.checkAdAvailable(zoneId);
+                    showAdAvailabilityToast(zoneId, isAvailable);
                     break;
                 case R.id.check_rewarded_btn:
-                    PeakSdk.checkAdAvailable(rewardedInterstitialZoneEt.getText().toString());
+                    zoneId = rewardedInterstitialZoneEt.getText().toString();
+                    isAvailable = PeakSdk.checkAdAvailable(zoneId);
+                    showAdAvailabilityToast(zoneId, isAvailable);
                     break;
                 case R.id.check_static_btn:
-                    PeakSdk.checkAdAvailable(staticInterstitialZoneEt.getText().toString());
+                    zoneId = staticInterstitialZoneEt.getText().toString();
+                    isAvailable = PeakSdk.checkAdAvailable(zoneId);
+                    showAdAvailabilityToast(zoneId, isAvailable);
                     break;
             }
+        }
+    }
+
+    private void showAdAvailabilityToast(String zoneId, boolean isAvailable) {
+        if (isAvailable) {
+            Toast.makeText(getContext(), "Ad is available for zone " + zoneId, Toast.LENGTH_SHORT)
+                    .show();
+        } else {
+            Toast.makeText(getContext(), "Ad is NOT available for zone " + zoneId, Toast.LENGTH_SHORT)
+                    .show();
         }
     }
 
