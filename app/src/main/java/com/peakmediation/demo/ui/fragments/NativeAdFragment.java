@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.peak.PeakAsyncAdRequest;
+import com.peak.PeakAsyncInterstitialAdRequest;
 import com.peak.PeakSdk;
 import com.peak.nativeads.model.PeakNativeAdModel;
 import com.peakmediation.demo.R;
@@ -28,12 +29,16 @@ public class NativeAdFragment extends Fragment implements View.OnClickListener {
     private FrameLayout nativeContainer;
     private ProgressBar nativeProgressBar;
     private PeakAsyncAdRequest asyncAdRequest;
-    private PeakAsyncAdRequest.PeakAsyncAdRequestListener peakAsyncAdRequestListener =
-            new PeakAsyncAdRequest.PeakAsyncAdRequestListener() {
+
+    private PeakAsyncInterstitialAdRequest.AsyncAdRequestListener peakAsyncAdRequestListener =
+            new PeakAsyncInterstitialAdRequest.AsyncAdRequestListener() {
+
+                @SuppressWarnings("ConstantConditions")
                 @Override
                 public void onAdReady(String adZoneId) {
                     showNative();
                 }
+
             };
 
     @Override

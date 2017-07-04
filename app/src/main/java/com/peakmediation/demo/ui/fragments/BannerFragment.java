@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
 import com.peak.PeakAsyncAdRequest;
+import com.peak.PeakAsyncInterstitialAdRequest;
 import com.peak.PeakSdk;
 import com.peakmediation.demo.R;
 
@@ -23,14 +24,19 @@ public class BannerFragment extends Fragment implements View.OnClickListener {
     private FrameLayout bannerContainer;
     private ProgressBar bannerProgressBar;
     private PeakAsyncAdRequest asyncAdRequest;
-    private PeakAsyncAdRequest.PeakAsyncAdRequestListener peakAsyncAdRequestListener =
-            new PeakAsyncAdRequest.PeakAsyncAdRequestListener() {
+
+    private PeakAsyncInterstitialAdRequest.AsyncAdRequestListener peakAsyncAdRequestListener =
+            new PeakAsyncInterstitialAdRequest.AsyncAdRequestListener() {
+
+                @SuppressWarnings("ConstantConditions")
                 @Override
                 public void onAdReady(String adZoneId) {
                     bannerProgressBar.setVisibility(View.GONE);
                     showBanner();
                 }
+
             };
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

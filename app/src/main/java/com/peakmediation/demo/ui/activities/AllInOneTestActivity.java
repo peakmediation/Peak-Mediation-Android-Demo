@@ -67,7 +67,7 @@ public class AllInOneTestActivity extends AppCompatActivity {
             }
             PeakSdk.setTargetingGender(targetingGender);
         }
-        PeakSdk.initialize(appId, uiHelper, new PeakSdkDemoListener(this, "PeakSdk"));
+        PeakSdk.initialize(appId, this, new PeakSdkDemoListener(this, "PeakSdk"));
     }
 
     private class PagerAdapter extends FragmentStatePagerAdapter {
