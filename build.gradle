@@ -10,6 +10,10 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+
+        maven {
+            url "http://peak-datapipeline.earth3.nixsolutions.com:8081/artifactory/libs-release-local/"
+        }
     }
 }
 
