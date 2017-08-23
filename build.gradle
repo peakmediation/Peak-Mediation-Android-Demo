@@ -12,7 +12,7 @@ allprojects {
         jcenter()
 
         maven {
-            url "http://peak-datapipeline.earth3.nixsolutions.com:8081/artifactory/libs-release-local/"
+            url "http://repos.peakmediation.com:8081/artifactory/libs-release-local/"
         }
     }
 }
